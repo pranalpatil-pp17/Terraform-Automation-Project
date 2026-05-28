@@ -1,15 +1,15 @@
 pipeline {
     agent any
     parameters {
-        choice(
-            name: 'ACTION',
-            choices: ['plan', 'apply'],
-            description: 'Select the action to perform'
-        )
         string(
             name: 'BRANCH',
             defaultValue: 'main',
             description: 'Enter the branch name to checkout'
+        )
+        choice(
+            name: 'ACTION',
+            choices: ['plan', 'apply'],
+            description: 'Select the action to perform'
         )
     }
     stages {
