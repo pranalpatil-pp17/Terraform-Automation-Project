@@ -3,6 +3,6 @@ terraform {
     bucket = "terraform-automation-backup-data"
     key = "main"
     region = "ap-south-1"
-    dynamodb_table = "my-dynamodb-table"
+    use_lockfile = true  
   }
 }
